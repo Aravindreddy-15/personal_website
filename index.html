@@ -1,71 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aravind Reddy</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
 
+<body>
+  <div class="container">
     <header>
-        <div class="container">
-            <h1>Your Name</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" data-page="home">Home</a></li>
-                    <li><a href="#" data-page="education">Education</a></li>
-                    <li><a href="#" data-page="skills">Skills</a></li>
-                    <li><a href="#" data-page="experience">Experience</a></li>
-                    <li><a href="#" data-page="certifications">Certifications</a></li>
-                    <li><a href="#" data-page="accomplishments">Accomplishments</a></li>
-                </ul>
-            </nav>
-        </div>
+      <img src="/Users/aravindreddy/personal_website/Aravind.jpeg" alt="Profile Picture" class="profile-picture">
+      <div class="header-content">
+        <h2>Hola 👋</h2>
+        <p>Enthusiastic MSc student in Big Data and High-Performance Computing with a solid foundation in machine learning, data science, and statistical modeling. Currently interning as a Data Analyst, where I apply my skills in data visualization, sales forecasting, and model deployment. Experienced in developing innovative, data-driven solutions for complex problem.</p>
+      </div>
     </header>
 
-    <section id="home">
-        <div class="container">
-            <h2>Welcome to My Portfolio</h2>
-            <p>Work in progress.</p>
+    <nav id="slider-nav">
+      <ul>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#accomplishments">Accomplishments</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
+
+
+    <main>
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <h3>Master of Big Data and High-Performance Computing</h3>
+          <p><strong>University of Liverpool</strong> | September 2022 - Expected July 2024</p>
+          <p>Key Courses: Machine Learning, Reinforcement Learning, Neural Networks, Data Mining and Visualization.</p>
         </div>
-    </section>
-
-    <!-- Other sections (education, skills, experience, certifications, accomplishments) will go here -->
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        <div class="education-item">
+          <h3>Bachelor of Computer Science and Engineering</h3>
+          <p><strong>CMR College of Engineering and Technology</strong> | August 2018 - July 2022</p>
+          <p>Grade: 8.2</p>
+          <p>Key Courses: Artificial Intelligence, Natural Language Processing, Python Programming.</p>
         </div>
-    </footer>
+      </section>
 
-    document.addEventListener("DOMContentLoaded", () => {
-        const content = document.getElementById('content');
-        const links = document.querySelectorAll('nav ul li a');
-    
-        links.forEach(link => {
-            link.addEventListener('click', (event) => {
-                event.preventDefault();
-                const page = event.target.getAttribute('data-page');
-                loadPage(page);
-            });
-        });
-    
-        // Load the default page
-        loadPage('home');
-    
-        function loadPage(page) {
-            fetch(`${page}.html`)
-                .then(response => response.text())
-                .then(data => {
-                    content.innerHTML = data;
-                })
-                .catch(error => {
-                    content.innerHTML = '<p>Error loading page. Please try again later.</p>';
-                    console.error('Error loading page:', error);
-                });
-        }
-    });
-    
+      <section id="experience">
+        <h2>Experience</h2>
+        <div class="experience-item">
+          <h3>Data Analyst Intern</h3>
+          <p><strong>July 2023 - Present</strong></p>
+          <p>Urban Science International, Reading, United Kingdom</p>
+          <ul>
+            <li>Coordinated with a team of 8 to ensure the timely and accurate updating of MarketView for diverse countries and ensuring an accurate representation of Brand and Dealer performances.</li>
+            <li>Worked on a Spanish sales forecasting project, utilizing SARIMA for accurate sales predictions.</li>
+            <li>Analyzed a dataset spanning the past 20 years to enhance forecasting precision and reduced the error rate by 2%.</li>
+          </ul>
+        </div>
+
+        <div class="experience-item">
+          <h3>Software Engineer Intern</h3>
+          <p><strong>March 2022 - May 2022</strong></p>
+          <p>OpenText, Bangalore, India</p>
+          <ul>
+            <li>Started as a Software Engineer intern at OpenText and contributed with a team of 7 professionals to the development and deployment of invoicing applications for major companies such as Tesco and ALDI.</li>
+            <li>Wrote automated test cases and unit tests to ensure the quality and reliability of the model and improved accuracy by 3%.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="skills-item">
+          <h1>Skills</h1>
+          <ul class="skills-list">
+            <li>Languages: Python, SQL</li>
+            <li>Frameworks: PyTorch, Pandas, Numpy, Scikit-Learn, Matplotlib, Seaborn</li>
+            <li>Tools: Power BI, Excel, PowerPoint, MySQL, SQL Server Management Studio</li>
+            <li>Platforms: Jupyter Notebook, Visual Studio Code, Vertex AI</li>
+            <li>Data Skills: Statistics, Data Manipulation, Hypothesis Testing, Machine Learning</li>
+            <li>Soft Skills: People Management, Excellent communication</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <p>Details about your projects.</p>
+      </section>
+
+      <section id="certifications">
+        <div class="certifications-item">
+          <h1>Certifications</h1>
+        <ul class="certifications-list">
+          <li>Supervised Machine Learning: Regression and Classification (DeepLearning.AI, Stanford University)</li>
+          <li>Prompt Design in Vertex AI (Google)</li>
+          <li>Introduction to Generative AI (Google)</li>
+          <li>Introduction to Large Language Models (Google)</li>
+          <li>Introduction to Responsible AI (Google)</li>
+          <li>Ask Questions to Make Data-Driven Decisions (Google)</li>
+          <li>The Data Scientist's Toolbox (Johns Hopkins University)</li>
+          <li>Foundations: Data, Data, Everywhere (Google)</li>
+        </ul>
+        </div>
+      </section>
+
+      <section id="accomplishments">
+        <div class="accomplishments-item">
+          <h1>Accomplishments</h1>
+          <ul class="accomplishments-list">
+            <li>Secured first place in a competition held by the Data Science Artificial Intelligence Society at the University of Liverpool (Enappsys)</li>
+            <li>Earned a Certificate of Achievement by ICPC for Asia Amritapuri First Round Programming Contest 2021</li>
+            <li>Won a Gold medal in MTSO (Math Talent Search Olympiad) conducted by INTSO (Indian National Talent Search Olympiad)</li>
+            <li>Earned a Certificate of Merit by INTSO (Indian National Talent Search Olympiad) in Aptitude, Mathematics</li>
+            <li>Secured 1st place in the National Level Science Talent Search Examination conducted by the National Science Talent Search Foundation</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="Contact">
+        <div class="social-icons">
+          <a href="https://www.linkedin.com/in/aravindreddy15/" class="linkedin"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
 </body>
 </html>
